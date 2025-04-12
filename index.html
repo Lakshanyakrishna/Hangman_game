@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hangman Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>𓍯 HANGMAN CHALLENGE</h1>
+
+    <div class="setup-area">
+      <label for="difficulty">Choose Difficulty:</label>
+      <select id="difficulty">
+        <option value="easy">Easy 😄</option>
+        <option value="medium">Medium 😐</option>
+        <option value="hard">Hard 😰</option>
+      </select>
+      <button id="start-btn"> Tap to Play</button>
+    </div>
+
+    <!-- Hidden initially -->
+    <div class="game-area" id="gameArea" style="display: none;">
+      <canvas id="hangmanCanvas" width="150" height="200"></canvas>
+      <p id="hintText">Hint: </p>
+      <div id="wordDisplay" class="word-display"></div>
+      <p>Incorrect guesses: <span id="wrongCount">0</span> / 6</p>
+    </div>
+
+    <div id="popup" class="popup-container" style="display: none;">
+      <div class="popup">
+        <p id="popupMessage"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
